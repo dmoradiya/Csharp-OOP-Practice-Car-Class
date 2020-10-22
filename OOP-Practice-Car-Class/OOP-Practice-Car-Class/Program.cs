@@ -6,7 +6,7 @@ namespace OOP_Practice_Car_Class
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
