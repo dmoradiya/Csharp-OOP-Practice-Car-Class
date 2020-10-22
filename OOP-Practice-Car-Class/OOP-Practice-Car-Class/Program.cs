@@ -6,7 +6,8 @@ namespace OOP_Practice_Car_Class
     {
         static void Main(string[] args)
         {
-            Car car = new Car(); 
+            Car car = new Car();
+            Console.Write(car);
         }
     }
 }

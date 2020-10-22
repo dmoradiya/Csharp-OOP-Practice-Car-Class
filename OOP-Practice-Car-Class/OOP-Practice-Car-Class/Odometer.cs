@@ -19,8 +19,12 @@ namespace OOP_Practice_Car_Class
                 {
                     _counter = value - 999999;
                 }
+                else
+                {
+                    _counter = value;
+                }
                
-                _counter = value;
+               
 
             }
         }

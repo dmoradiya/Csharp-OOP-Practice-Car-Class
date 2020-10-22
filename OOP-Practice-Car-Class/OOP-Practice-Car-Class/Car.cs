@@ -24,12 +24,12 @@ namespace OOP_Practice_Car_Class
             Color = "Black";
             MaximumOccupancy = 5;
             FuelEfficiency = 10;
-            Meter = new Odometer(1000);
+            Meter = new Odometer(1000000);
             Tank = new FuelTank(100,50);
         }
         public override string ToString()
         {
-            return $"A {Color} {Make} {Model} with {Meter}KM on the odometer, that has enough fuel to travel 65KM";
+            return $"A {Color} {Make} {Model} with {Meter.Counter}KM on the odometer, that has enough fuel to travel 65KM";
         }
 
     }
