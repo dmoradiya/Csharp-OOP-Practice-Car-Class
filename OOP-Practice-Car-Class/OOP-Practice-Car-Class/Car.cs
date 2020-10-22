@@ -11,7 +11,10 @@ namespace OOP_Practice_Car_Class
         public string Color { get; set; }
         public int MaximumOccupancy { get; set; }
         public double FuelEfficiency { get; set; }
-       
+        public Odometer Meter { get; set; }
+
+        public FuelTank Tank { get; set; }
+
 
     }
 }
