@@ -7,9 +7,11 @@ namespace OOP_Practice_Car_Class
         static void Main(string[] args)
         {
             Car car = new Car();
-            Console.Write(car);
+           
+            car.Drive();
             Console.WriteLine(car.Tank.Level);
-            
+            Console.Write(car);
+
         }
     }
 }

@@ -56,7 +56,11 @@ namespace OOP_Practice_Car_Class
             Level += Liters;
         }
 
-        
+        public FuelTank()
+        {
+            Capacity = 50;
+            Level = 50;
+        }
 
         public FuelTank(double capacity, double level)
         {
