@@ -28,7 +28,11 @@ namespace OOP_Practice_Car_Class
 
             }
         }
-
+        public double Amount { get; set; }
+        public void Increment(double amount)
+        {
+            Counter += Amount;
+        }
 
         public Odometer(double counter)
         {
