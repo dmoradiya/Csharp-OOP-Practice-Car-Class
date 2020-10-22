@@ -29,7 +29,19 @@ namespace OOP_Practice_Car_Class
             }
             set
             {
-                _level = value;
+                if( value < 0 )
+                {
+                    throw new Exception("Fuel is empty.");
+                }
+                else if( value > Capacity )
+                {
+                    _level = Capacity;
+                }
+                else
+                {
+                    _level = value;
+                }
+                
 
             }
         }

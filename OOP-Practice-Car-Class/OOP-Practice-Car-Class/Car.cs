@@ -25,7 +25,7 @@ namespace OOP_Practice_Car_Class
             MaximumOccupancy = 5;
             FuelEfficiency = 10;
             Meter = new Odometer(1000000);
-            Tank = new FuelTank(100,50);
+            Tank = new FuelTank(100,40);
         }
         public override string ToString()
         {
