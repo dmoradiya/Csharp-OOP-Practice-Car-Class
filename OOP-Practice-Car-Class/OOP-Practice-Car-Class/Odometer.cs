@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Practice_Car_Class
 {
-    class Odometer
+    public class Odometer
     {
         private double _counter;
         public double Counter
@@ -13,7 +13,7 @@ namespace OOP_Practice_Car_Class
             {
                 return _counter;
             }
-            set
+            private set
             {
                 if( value > 999999)
                 {
@@ -23,16 +23,14 @@ namespace OOP_Practice_Car_Class
                 else
                 {
                     _counter = value;
-                }
-               
-               
+                }              
 
             }
         }
-        public double Amount { get; set; }
-        public void Increment(double Amount)
+       
+        public void Increment(double amount)
         {
-            Counter = Counter + Amount;
+            Counter += amount;
         }
         
 

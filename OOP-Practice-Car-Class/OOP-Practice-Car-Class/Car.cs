@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Practice_Car_Class
 {
-    class Car
+    public class Car
     {
        
 
@@ -14,32 +14,38 @@ namespace OOP_Practice_Car_Class
         public int MaximumOccupancy { get; set; }
         public double FuelEfficiency { get; set; }
         public Odometer KMs { get; set; }
-        public double Distance { get; set; }
-       
-
         public FuelTank Tank { get; set; }
-        Odometer odometer = new Odometer();
-        FuelTank fuelTank = new FuelTank();
-        
-        
+        //odometer odometer = new odometer();
+        //fueltank fueltank = new fueltank();
 
-        //public void Drive()
-        //{
-        //    fuelTank.BurnFuel(20);
-        //    odometer.Increment(20 * FuelEfficiency);
-        //}
 
-        public void Drive(double Distance)
+
+        public void Drive()
         {
-            
-            fuelTank.BurnFuel(Distance/FuelEfficiency);            
-            odometer.Increment(Distance);
+            Tank.BurnFuel(20/FuelEfficiency);
+            KMs.Increment(20);
         }
 
+        public void Drive(double distance)
+        {
+            
+            Tank.BurnFuel(distance/FuelEfficiency);            
+            KMs.Increment(distance);
+        }
 
-
+        // Default Constructor
+        public Car()
+        {
+            Make = "Honda";
+            Model = "CRV";
+            Color = "White";
+            MaximumOccupancy = 5;
+            FuelEfficiency = 9.5;
+            KMs = new Odometer();
+            Tank = new FuelTank(); 
+        }
         
-
+        // Greedy Constructor
         public Car( string make, string model, string color,int maximumOccupancy, double fuelEfficiency, Odometer kms, FuelTank tank)
         {
             Make = make;

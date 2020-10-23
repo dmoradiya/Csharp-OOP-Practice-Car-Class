@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Practice_Car_Class
 {
-    class FuelTank
+    public class FuelTank
     {
         private double _capacity;
         public double Capacity
@@ -13,7 +13,7 @@ namespace OOP_Practice_Car_Class
             {
                 return _capacity;
             }
-            set
+            private set
             {
                 _capacity = value;
 
@@ -27,7 +27,7 @@ namespace OOP_Practice_Car_Class
             {
                 return _level;
             }
-            set
+            private set
             {
                 if( value < 0 )
                 {
@@ -45,8 +45,7 @@ namespace OOP_Practice_Car_Class
 
             }
         }
-        //public double Liters { get; set; }
-        //double Liters;
+        
          public void BurnFuel(double Liters)
          {
             Level -= Liters;
