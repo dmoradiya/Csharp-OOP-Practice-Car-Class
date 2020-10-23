@@ -18,6 +18,7 @@ namespace OOP_Practice_Car_Class
                 if( value > 999999)
                 {
                     _counter = value - 999999;
+
                 }
                 else
                 {
@@ -29,7 +30,7 @@ namespace OOP_Practice_Car_Class
             }
         }
         public double Amount { get; set; }
-        public void Increment(double amount)
+        public void Increment(double Amount)
         {
             Counter = Counter + Amount;
         }

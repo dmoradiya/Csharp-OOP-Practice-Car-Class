@@ -45,13 +45,14 @@ namespace OOP_Practice_Car_Class
 
             }
         }
-        public double Liters { get; set; }
+        //public double Liters { get; set; }
+        //double Liters;
          public void BurnFuel(double Liters)
          {
             Level -= Liters;
          }
 
-        public void Fill(double liters)
+        public void Fill(double Liters)
         {
             Level += Liters;
         }

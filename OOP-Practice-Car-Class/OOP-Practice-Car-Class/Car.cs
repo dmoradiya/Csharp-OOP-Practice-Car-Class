@@ -14,9 +14,8 @@ namespace OOP_Practice_Car_Class
         public int MaximumOccupancy { get; set; }
         public double FuelEfficiency { get; set; }
         public Odometer KMs { get; set; }
-        public double Kilometers { get; set; }
-        public double Capacity { get; set; }
-        public double Level { get; set; }
+        public double Distance { get; set; }
+       
 
         public FuelTank Tank { get; set; }
         Odometer odometer = new Odometer();
@@ -30,12 +29,11 @@ namespace OOP_Practice_Car_Class
         //    odometer.Increment(20 * FuelEfficiency);
         //}
 
-        public void Drive(string prompt)
+        public void Drive(double Distance)
         {
-            Console.WriteLine(prompt);
-            Kilometers = double.Parse(Console.ReadLine());
-            fuelTank.BurnFuel(Kilometers/FuelEfficiency);            
-            odometer.Increment(Kilometers);
+            
+            fuelTank.BurnFuel(Distance/FuelEfficiency);            
+            odometer.Increment(Distance);
         }
 
 
