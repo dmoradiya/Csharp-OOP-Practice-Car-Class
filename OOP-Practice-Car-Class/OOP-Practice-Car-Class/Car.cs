@@ -14,31 +14,43 @@ namespace OOP_Practice_Car_Class
         public int MaximumOccupancy { get; set; }
         public double FuelEfficiency { get; set; }
         public Odometer KMs { get; set; }
+        public double Kilometers { get; set; }
+        public double Capacity { get; set; }
+        public double Level { get; set; }
 
         public FuelTank Tank { get; set; }
         Odometer odometer = new Odometer();
-       FuelTank fuelTank = new FuelTank();
+        FuelTank fuelTank = new FuelTank();
+        
+        
+
+        //public void Drive()
+        //{
+        //    fuelTank.BurnFuel(20);
+        //    odometer.Increment(20 * FuelEfficiency);
+        //}
+
+        public void Drive(string prompt)
+        {
+            Console.WriteLine(prompt);
+            Kilometers = double.Parse(Console.ReadLine());
+            fuelTank.BurnFuel(Kilometers/FuelEfficiency);            
+            odometer.Increment(Kilometers);
+        }
+
 
 
         
 
-        public void Drive()
+        public Car( string make, string model, string color,int maximumOccupancy, double fuelEfficiency, Odometer kms, FuelTank tank)
         {
-            fuelTank.BurnFuel(20);
-            odometer.Increment(20 * FuelEfficiency);
-        }
-
-       
-
-        public Car()
-        {
-            Make = "Toyota";
-            Model = "Corolla";
-            Color = "Black";
-            MaximumOccupancy = 5;
-            FuelEfficiency = 10;
-            KMs = new Odometer(20 * FuelEfficiency);
-            Tank = new FuelTank();
+            Make = make;
+            Model = model;
+            Color = color;
+            MaximumOccupancy =maximumOccupancy;
+            FuelEfficiency = fuelEfficiency;
+            KMs = kms;
+            Tank = tank;
         }
         public override string ToString()
         {
